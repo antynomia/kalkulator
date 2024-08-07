@@ -100,47 +100,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//lottie animation
-document.addEventListener('DOMContentLoaded', function() {
-    const animation1 = lottie.loadAnimation({
-        container: document.getElementById('animation1'), // kontener do animacji
-        renderer: 'svg', // renderowanie SVG
-        loop: true, // animacja w pętli
-        autoplay: true, // automatyczne odtwarzanie
-        path: 'https://lottie.host/25e4928e-52da-499a-950b-92c66fce674b/lVJqRGtZLK.json' // ścieżka do pliku JSON z animacją
+// Initialize animations
+    const animations = [
+        { id: 'korzysci_elastyczny_czas', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-elastyczny-czas.json' },
+        { id: 'korzysci_elastyczna_stawka', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-elastyczna-stawka.json' },
+        { id: 'korzysci_okresy', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-okresy-rozliczeniowe.json' },
+        { id: 'zakres_logo', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-logo.json' },
+        { id: 'zakres_web', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-web.json' },
+        { id: 'zakres_mobile', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-mobile.json' },
+        { id: 'zakres_print', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-print.json' },
+        { id: 'zakres_pixel', path: '' },
+        { id: 'zakres_fotomontaz', path: '' },
+        { id: 'info_rozliczenie', path: '' },
+        { id: 'info_godziny', path: '' },
+        { id: 'info_elastycznosc', path: '' },
+    ];
+
+    animations.forEach(animation => {
+        lottie.loadAnimation({
+            container: document.getElementById(animation.id),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: animation.path
+        });
     });
 
-    const animation2 = lottie.loadAnimation({
-        container: document.getElementById('animation2'), // kontener do animacji
-        renderer: 'svg', // renderowanie SVG
-        loop: true, // animacja w pętli
-        autoplay: true, // automatyczne odtwarzanie
-        path: 'https://lottie.host/96da642c-3b6c-4a40-bf7c-b5fdbe8509bd/yE0HndB4r6.json' // ścieżka do pliku JSON z animacją
-    });
-
-    const animation3 = lottie.loadAnimation({
-        container: document.getElementById('animation3'), // kontener do animacji
-        renderer: 'svg', // renderowanie SVG
-        loop: true, // animacja w pętli
-        autoplay: true, // automatyczne odtwarzanie
-        path: 'https://lottie.host/79f8b389-12f7-4017-a07a-ab12c04224c5/9lrwMJUkt8.json' // ścieżka do pliku JSON z animacją
-    });
-
-    const animation4 = lottie.loadAnimation({
-        container: document.getElementById('animation4'), // kontener do animacji
-        renderer: 'svg', // renderowanie SVG
-        loop: true, // animacja w pętli
-        autoplay: true, // automatyczne odtwarzanie
-        path: 'https://lottie.host/b956971b-0731-4973-928e-243fda4e6138/2QSA5oN4Jn.json' // ścieżka do pliku JSON z animacją
-    });
-
-    const animation5 = lottie.loadAnimation({
-        container: document.getElementById('animation5'), // kontener do animacji
-        renderer: 'svg', // renderowanie SVG
-        loop: true, // animacja w pętli
-        autoplay: true, // automatyczne odtwarzanie
-        path: 'https://lottie.host/72cf8d72-3277-4128-aee1-a466147e0500/n1oh170fp1.json' // ścieżka do pliku JSON z animacją
-    });
-
-    // Dodaj więcej animacji, jeśli potrzebujesz
-});
