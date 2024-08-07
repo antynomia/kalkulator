@@ -414,6 +414,7 @@ footer {
 .footer-contact {
     text-align: right;
 }
+
 .footer-help h3,
 .footer-contact h4 {
     font-size: 24px;
@@ -439,6 +440,7 @@ footer {
 .footer-social {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     margin-top: 20px;
 }
 
@@ -450,7 +452,6 @@ footer {
 .footer-social img {
     width: 40px;
     height: 40px;
-    filter: invert(100%); /* Makes the icons white */
     transition: filter 0.3s;
 }
 
@@ -465,3 +466,4 @@ footer {
     text-align: center;
     width: 100%;
 }
+
