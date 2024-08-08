@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
@@ -521,5 +523,15 @@ footer {
 
     .info-item {
         flex: 1 1 100%; /* Dostosowanie do szerokości ekranu */
+    }
+
+    .footer-container {
+        text-align: center;
+    }
+    .footer-contact {
+        text-align: center;
+    }
+    .footer-social {
+        justify-content: center;
     }
 }
