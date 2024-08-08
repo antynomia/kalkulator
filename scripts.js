@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'zakres_web', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-web.json' },
         { id: 'zakres_mobile', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-mobile.json' },
         { id: 'zakres_print', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-print.json' },
-        { id: 'zakres_pixel', path: '' },
-        { id: 'zakres_fotomontaz', path: '' },
-        { id: 'info_rozliczenie', path: '' },
+        { id: 'zakres_pixel', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/' },
+        { id: 'zakres_fotomontaz', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/' },
+        { id: 'info_rozliczenie', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-rozliczenie.json' },
         { id: 'info_godziny', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-godziny.json' },
-        { id: 'info_elastycznosc', path: '' },
+        { id: 'info_elastycznosc', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/' },
     ];
 
     animations.forEach(animation => {
