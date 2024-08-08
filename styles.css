@@ -13,6 +13,8 @@ header {
     z-index: 1000;
 }
 
+
+
 #top-menu {
     background: rgba(255, 255, 255, 0); /* Całkowicie przezroczyste tło */
     width: 100%;
@@ -26,7 +28,7 @@ header {
 }
 
 #top-menu.scrolled {
-    background: #ffffff; /* Białe tło po przewinięciu */
+    background: rgba(255, 255, 255, 0.9); /* Lekko przezroczyste tło */
     transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out; /* Płynne przejście dla opacity i transform */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
 }
@@ -49,6 +51,7 @@ header {
 .top-menu .logo img {
     height: 40px; /* Dostosuj wysokość logo do potrzeb */
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Płynne przejście dla opacity i transform */
+    margin-left: 20px;
 }
 
 #hero {
@@ -75,11 +78,13 @@ header {
 .hero-content h1 {
     font-size: 72pt;
     margin: 0;
+    margin-left: 20px;
 }
 
 .hero-content h2 {
     font-size: 40pt;
     margin: 0;
+    margin-left: 20px;
 }
 
 .hero-content h3 {
@@ -108,13 +113,11 @@ header {
     padding: 0 20px;
 }
 
-
 .hero-content-hello h2 {
     font-size: 36px;
     color: #000; /* Kolor nagłówka */
     margin-bottom: 0px;
 }
-
 
 .hello {
     padding: 0px 20px;
@@ -132,7 +135,6 @@ header {
     color: #333;
     line-height: 1.6;
 }
-
 
 main {
     max-width: 1200px;
@@ -223,7 +225,6 @@ main {
     display: inline-block; /* Aby ustawić animacje w linii */
 }
 
-
 #subscription-calculator {
     background: linear-gradient(180deg, #0EB688 0%, #016D70 100%);
     box-shadow: 0px 4px 0px #024C5C, 0px 74px 94px rgba(0, 203, 147, 0.2), 0px 50px 40px rgba(0, 96, 69, 0.1), 0px 26px 20px rgba(0, 63, 45, 0.1);
@@ -231,7 +232,7 @@ main {
     padding: 20px;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 120px; /* Ustawienie kalkulatora, aby zatrzymywał się 30px od góry */
+    top: 120px; /* Ustawienie kalkulatora, aby zatrzymywał się 120px od góry */
     color: #fff;
 }
 
@@ -324,6 +325,14 @@ input[type="range"]::-ms-track {
     color: transparent; /* Kolor tekstu (przezroczysty) */
 }
 
+/* Stylizacja suwaka */
+input[type="range"]::-ms-track {
+    background: transparent; /* Tło dla suwaka w IE */
+    border-color: transparent; /* Kolor obramowania dla suwaka w IE */
+    color: transparent; /* Kolor dla suwaka w IE */
+}
+
+/* Segment Control */
 
 .segmented-control {
     display: flex;
@@ -370,6 +379,9 @@ input[type="range"]::-ms-track {
     font-size: 16px;
 }
 
+
+/* Regulamin */
+
 .regulamin {
     background: #f9f9f9;
     padding: 20px;
@@ -389,6 +401,7 @@ input[type="range"]::-ms-track {
 }
 
 
+/* Stopka */
 footer {
     background-color: #333;
     color: #fff;
@@ -467,3 +480,46 @@ footer {
     width: 100%;
 }
 
+/* Responsywność */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        padding-right: 0;
+    }
+    #top-menu {
+        height: 60px;
+    }
+
+    .top-menu .logo img {
+        height: 30px;
+        margin-left: 20px;
+    }
+
+    #hero {
+        height: 400px;
+        background-position: left -1250px top -250px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 48pt; /* Dostosowanie rozmiaru fontu */
+        margin-left: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 24pt; /* Dostosowanie rozmiaru fontu */
+        margin-left: 20px;
+    }
+
+    .hero-content-hello h2 {
+        margin: 20px;
+        margin-bottom: 40px;
+    }
+
+    .info-item {
+        flex: 1 1 100%; /* Dostosowanie do szerokości ekranu */
+    }
+}
