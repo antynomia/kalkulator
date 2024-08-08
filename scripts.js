@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'zakres_pixel', path: '' },
         { id: 'zakres_fotomontaz', path: '' },
         { id: 'info_rozliczenie', path: '' },
-        { id: 'info_godziny', path: '' },
+        { id: 'info_godziny', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-godziny.json' },
         { id: 'info_elastycznosc', path: '' },
     ];
 
