@@ -221,6 +221,7 @@ main {
 .info-item p {
     font-size: 14px;
     margin: 0;
+    line-height: 1.4;
 }
 
 .info-icon {
@@ -330,8 +331,10 @@ main {
 
 .calculator p {
     margin: 30px;
-    line-height: 10%;
+    line-height: 1;
 }
+
+
 
 #hours {
     width: 100%;
@@ -342,6 +345,7 @@ main {
 /* Stylizacja suwaka */
 input[type="range"] {
     -webkit-appearance: none; /* Usuwa domyślny styl suwaka w WebKit (Chrome, Safari) */
+    appearance: none;
     width: 100%; /* Szerokość suwaka */
     height: 8px; /* Wysokość ścieżki suwaka */
     background: #fff; /* Tło ścieżki suwaka */
