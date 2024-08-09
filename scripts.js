@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'zakres_fotomontaz', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/' },
         { id: 'info_rozliczenie', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-rozliczenie.json' },
         { id: 'info_godziny', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-godziny.json' },
-        { id: 'info_elastycznosc', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/' },
+        { id: 'info_elastycznosc', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-elastycznosc.json' },
     ];
 
     animations.forEach(animation => {
