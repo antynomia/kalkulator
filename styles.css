@@ -444,6 +444,10 @@ input[type="range"]::-ms-track {
 
 }
 
+.segment:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .result {
     text-align: center;
     color: #fff;
