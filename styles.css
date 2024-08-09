@@ -83,18 +83,16 @@ header {
 .hero-content h1 {
     font-size: 72pt;
     margin: 0;
-    margin-left: 20px;
 }
 
 .hero-content h2 {
     font-size: 40pt;
-    margin: 0;
-    margin-left: 20px;
+    margin: 20px;
 }
 
 .hero-content h3 {
     font-size: 32px;
-    margin-top: 10px;
+    margin: 20px;
     font-weight: normal;
 }
 
@@ -183,7 +181,8 @@ main {
 }
 
 .info-section p {
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    line-height: 1.6;
 }
 
 .info-items {
@@ -322,6 +321,7 @@ main {
     color: #fff;
 }
 
+
 .calculator {
     display: flex;
     flex-direction: column;
@@ -329,8 +329,8 @@ main {
 }
 
 .calculator p {
-    margin-bottom: 0px;
-    margin-top: 30px;
+    margin: 30px;
+    line-height: 10%;
 }
 
 #hours {
