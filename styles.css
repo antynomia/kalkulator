@@ -16,6 +16,7 @@ header {
 }
 
 
+/* TOP MENU */
 
 #top-menu {
     background: rgba(255, 255, 255, 0); /* Całkowicie przezroczyste tło */
@@ -55,6 +56,8 @@ header {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Płynne przejście dla opacity i transform */
     margin-left: 20px;
 }
+
+/* HERO */
 
 #hero {
     background: url('images/hero.jpg') no-repeat center center;
@@ -121,6 +124,8 @@ header {
     margin-bottom: 0px;
 }
 
+/* WPROWADZENIE */
+
 .hello {
     padding: 0px 20px;
     text-align: center;
@@ -137,6 +142,8 @@ header {
     color: #333;
     line-height: 1.6;
 }
+
+/* SERVICES */
 
 main {
     max-width: 1200px;
@@ -198,6 +205,9 @@ main {
     text-align: center;
 }
 
+
+
+
 .info-item i {
     font-size: 40px;
     margin-bottom: 10px;
@@ -226,6 +236,80 @@ main {
     margin-bottom: 10px; /* Margines wokół kontenera */
     display: inline-block; /* Aby ustawić animacje w linii */
 }
+
+
+
+/* PORTFOLIO */
+
+
+#portfolio h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+
+#portfolio h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #333; /* Kolor tekstu */
+}
+
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+}
+
+.portfolio-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #0EB688; /* Tło przycisku, takie samo jak kalkulatora */
+    color: #fff; /* Kolor tekstu na przycisku */
+    box-shadow: 0px 4px 4px rgba(2, 76, 92, 0.1), 0px 8px 8px rgba(2, 76, 92, 0.1), 0px 16px 24px rgba(2, 76, 92, 0.1), 0px 44px 64px rgba(0, 203, 147, 0.2);
+    border-radius: 8px; /* Zaokrąglone rogi (połowa wysokości przycisku, aby był całkowicie okrągły) */
+    padding: 10px 20px; /* Wewnętrzne odstępy */
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none; /* Usuwa podkreślenie */
+    transition: background-color 0.3s ease; /* Płynne przejście koloru tła */
+    height: 40px; /* Wysokość przycisku */
+    line-height: 40px; /* Dopasowanie linii tekstu w przycisku */
+}
+
+/* Efekt hover dla przycisku */
+.portfolio-button:hover {
+    background-color: #016D70; /* Ciemniejszy odcień zielonego na hover */
+}
+
+
+
+.behance-item {
+    background: #FFFFFF;
+    box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.07), 0px 10px 10px rgba(0, 0, 0, 0.08), 0px 2px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 0px;
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.behance-item iframe {
+    width: 100%;
+    height: 350px; /* Dopasuj wysokość iframe */
+    border-radius: 8px;
+    border: none;
+}
+
+
+/* KALKULATOR */
 
 #subscription-calculator {
     background: linear-gradient(180deg, #0EB688 0%, #016D70 100%);

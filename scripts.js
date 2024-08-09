@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'info_rozliczenie', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-rozliczenie.json' },
         { id: 'info_godziny', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-godziny.json' },
         { id: 'info_elastycznosc', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-elastycznosc.json' },
+        { id: 'info_raporty', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-raporty.json' },
     ];
 
     animations.forEach(animation => {
