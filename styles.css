@@ -219,6 +219,10 @@ header {
     margin-bottom: 0px;
 }
 
+.hero-content-hello-mobile {
+    display: none;
+}
+
 /* WPROWADZENIE */
 
 .hello {
@@ -749,7 +753,7 @@ footer {
     }
 
     #hero {
-        height: 280px;
+        height: 200px;
         background-attachment: scroll;
     }
 
@@ -762,6 +766,14 @@ footer {
         margin-left: 20px;
     }
 
+    .hero-content-hello {
+        display: none;
+    }
+
+    .hero-content-hello-mobile {
+        display: block;
+    }
+
     .hero-content-hello h2 {
         font-size: 24pt;
         margin: 20px;
@@ -769,6 +781,7 @@ footer {
 
     .hello {
         margin-bottom: 30px;
+        margin-top: 0px;
     }
 
     .hello p {
