@@ -774,6 +774,10 @@ footer {
         margin-bottom: 0px;
     }
 
+    .segmented-control {
+        display: grid;
+        gap: 10px;
+    }
 
     .footer-container {
         text-align: center;
