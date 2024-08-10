@@ -459,7 +459,7 @@ input[type="range"]::-ms-track {
 }
 
 .segment:hover {
-    background-color: #fff;
+    background-color: #ffffffc4;
     color: #000;
     border-color: #fff;
     box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.07), 0px 10px 10px rgba(0, 0, 0, 0.08), 0px 2px 3px rgba(0, 0, 0, 0.25);
@@ -623,8 +623,14 @@ footer {
     }
 
     .hero-content-hello h2 {
+        font-size: 24pt;
         margin: 20px;
         margin-bottom: 40px;
+    }
+
+    .hello p {
+        font-size: 16px;
+  
     }
 
     .info-item {
