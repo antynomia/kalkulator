@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
@@ -51,11 +55,33 @@ header {
     flex: 1;
 }
 
+.menu-links {
+    flex: 1;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.menu-links a {
+    margin-right: 20px;
+    font-weight: bold;
+    color: #0eb688;
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    color: #fff;
+}
+
+#top-menu.scrolled a:hover {
+    color: #000;
+}
+
 .top-menu .logo img {
     height: 40px; /* Dostosuj wysokość logo do potrzeb */
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Płynne przejście dla opacity i transform */
     margin-left: 20px;
 }
+
 
 /* HERO */
 
@@ -186,7 +212,7 @@ main {
 }
 
 .info-items {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -602,7 +628,7 @@ footer {
     }
 
     .top-menu .logo img {
-        height: 30px;
+        height: 25px;
         margin-left: 20px;
     }
 

@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrolledLogoSrc = 'images/logo-scrolled.png'; // Ścieżka do logo po przewinięciu
 
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) { // Możesz dostosować wartość 50 do swojego projektu
+        if (window.scrollY > 100) { // Możesz dostosować wartość 50 do swojego projektu
             topMenu.classList.add('scrolled');
             logoImg.src = scrolledLogoSrc; // Podmień logo na nowe
         } else {
@@ -98,6 +98,54 @@ document.addEventListener('DOMContentLoaded', function() {
             logoImg.src = originalLogoSrc; // Przywróć oryginalne logo
         }
     });
+});
+
+// Przesunięcie kalkulatora przy scrollu
+document.getElementById('scroll-to-calculator').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetElement = document.getElementById('subscription-calculator');
+
+    if (targetElement) {
+        // Sprawdź, czy urządzenie jest mobilne
+        let offsetPosition;
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            // Przesunięcie dla urządzeń mobilnych (768px lub mniejszych)
+            offsetPosition = targetElement.offsetTop - 80; 
+        } else {
+            // Przesunięcie dla urządzeń desktopowych (powyżej 768px)
+            offsetPosition = targetElement.offsetTop - 130; 
+        }
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+});
+
+// Przesunięcie Portfolio przy scrollu
+document.getElementById('scroll-to-portfolio').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetElement = document.getElementById('portfolio');
+
+    if (targetElement) {
+        // Sprawdź, czy urządzenie jest mobilne
+        let offsetPosition;
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            // Przesunięcie dla urządzeń mobilnych (768px lub mniejszych)
+            offsetPosition = targetElement.offsetTop - 80; 
+        } else {
+            // Przesunięcie dla urządzeń desktopowych (powyżej 768px)
+            offsetPosition = targetElement.offsetTop - 130; 
+        }
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
 });
 
 // Initialize animations
