@@ -82,6 +82,34 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCalculator(); // Wywołaj funkcję na starcie, aby ustawić domyślną wartość
 });
 
+// Initialize animations
+const animations = [
+    { id: 'korzysci_elastyczny_czas', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-elastyczny-czas.json' },
+    { id: 'korzysci_elastyczna_stawka', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-elastyczna-stawka.json' },
+    { id: 'korzysci_okresy', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-okresy-rozliczeniowe.json' },
+    { id: 'zakres_logo', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-logo.json' },
+    { id: 'zakres_web', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-web.json' },
+    { id: 'zakres_mobile', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-mobile.json' },
+    { id: 'zakres_print', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-print.json' },
+    { id: 'zakres_pixel', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-pixelart.json' },
+    { id: 'zakres_fotomontaz', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-fotomontaze.json' },
+    { id: 'info_rozliczenie', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-rozliczenie.json' },
+    { id: 'info_godziny', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-godziny.json' },
+    { id: 'info_elastycznosc', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-elastycznosc.json' },
+    { id: 'info_raporty', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-raporty.json' },
+];
+
+animations.forEach(animation => {
+    lottie.loadAnimation({
+        container: document.getElementById(animation.id),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: animation.path
+    });
+});
+
+
 // Przewijanie top menu
 document.addEventListener('DOMContentLoaded', function() {
     const topMenu = document.getElementById('top-menu');
@@ -99,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
 
 // Przesunięcie kalkulatora przy scrollu
 document.getElementById('scroll-to-calculator').addEventListener('click', function(e) {
@@ -148,30 +178,81 @@ document.getElementById('scroll-to-portfolio').addEventListener('click', functio
     }
 });
 
-// Initialize animations
-    const animations = [
-        { id: 'korzysci_elastyczny_czas', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-elastyczny-czas.json' },
-        { id: 'korzysci_elastyczna_stawka', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-elastyczna-stawka.json' },
-        { id: 'korzysci_okresy', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-korzysci-okresy-rozliczeniowe.json' },
-        { id: 'zakres_logo', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-logo.json' },
-        { id: 'zakres_web', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-web.json' },
-        { id: 'zakres_mobile', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-mobile.json' },
-        { id: 'zakres_print', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-print.json' },
-        { id: 'zakres_pixel', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-pixelart.json' },
-        { id: 'zakres_fotomontaz', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-fotomontaze.json' },
-        { id: 'info_rozliczenie', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-rozliczenie.json' },
-        { id: 'info_godziny', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-godziny.json' },
-        { id: 'info_elastycznosc', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-elastycznosc.json' },
-        { id: 'info_raporty', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-raporty.json' },
-    ];
+//Mobilne menu
 
-    animations.forEach(animation => {
-        lottie.loadAnimation({
-            container: document.getElementById(animation.id),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: animation.path
-        });
+// Dodaj poniższy kod do pliku scripts.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+
+    hamburgerIcon.addEventListener('click', function() {
+        mobileMenu.style.display = 'block';
     });
+
+    closeMenu.addEventListener('click', function() {
+        mobileMenu.style.display = 'none';
+    });
+
+    // Zmiana logo na przewiniętym top-menu
+    const topMenu = document.getElementById('top-menu');
+    const logoImg = document.getElementById('logo-img');
+    const originalLogoSrc = 'images/logo.png';
+    const scrolledLogoSrc = 'images/logo-scrolled.png';
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            topMenu.classList.add('scrolled');
+            logoImg.src = scrolledLogoSrc;
+        } else {
+            topMenu.classList.remove('scrolled');
+            logoImg.src = originalLogoSrc;
+        }
+    });
+
+    // Przesunięcie kalkulatora przy scrollu
+    document.getElementById('scroll-to-calculator').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetElement = document.getElementById('subscription-calculator');
+
+        if (targetElement) {
+            let offsetPosition;
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                offsetPosition = targetElement.offsetTop - 80;
+            } else {
+                offsetPosition = targetElement.offsetTop - 130;
+            }
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    // Przesunięcie Portfolio przy scrollu
+    document.getElementById('scroll-to-portfolio').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetElement = document.getElementById('portfolio');
+
+        if (targetElement) {
+            let offsetPosition;
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                offsetPosition = targetElement.offsetTop - 80;
+            } else {
+                offsetPosition = targetElement.offsetTop - 130;
+            }
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
 
