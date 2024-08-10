@@ -110,92 +110,33 @@ animations.forEach(animation => {
 });
 
 
-// Przewijanie top menu
-document.addEventListener('DOMContentLoaded', function() {
-    const topMenu = document.getElementById('top-menu');
-    const logoImg = document.getElementById('logo-img');
-    const originalLogoSrc = 'images/logo.png'; // Ścieżka do oryginalnego logo
-    const scrolledLogoSrc = 'images/logo-scrolled.png'; // Ścieżka do logo po przewinięciu
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) { // Możesz dostosować wartość 50 do swojego projektu
-            topMenu.classList.add('scrolled');
-            logoImg.src = scrolledLogoSrc; // Podmień logo na nowe
-        } else {
-            topMenu.classList.remove('scrolled');
-            logoImg.src = originalLogoSrc; // Przywróć oryginalne logo
-        }
-    });
-});
-
-
-
-// Przesunięcie kalkulatora przy scrollu
-document.getElementById('scroll-to-calculator').addEventListener('click', function(e) {
-    e.preventDefault();
-
-    const targetElement = document.getElementById('subscription-calculator');
-
-    if (targetElement) {
-        // Sprawdź, czy urządzenie jest mobilne
-        let offsetPosition;
-        if (window.matchMedia("(max-width: 768px)").matches) {
-            // Przesunięcie dla urządzeń mobilnych (768px lub mniejszych)
-            offsetPosition = targetElement.offsetTop - 80; 
-        } else {
-            // Przesunięcie dla urządzeń desktopowych (powyżej 768px)
-            offsetPosition = targetElement.offsetTop - 130; 
-        }
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
-});
-
-// Przesunięcie Portfolio przy scrollu
-document.getElementById('scroll-to-portfolio').addEventListener('click', function(e) {
-    e.preventDefault();
-
-    const targetElement = document.getElementById('portfolio');
-
-    if (targetElement) {
-        // Sprawdź, czy urządzenie jest mobilne
-        let offsetPosition;
-        if (window.matchMedia("(max-width: 768px)").matches) {
-            // Przesunięcie dla urządzeń mobilnych (768px lub mniejszych)
-            offsetPosition = targetElement.offsetTop - 80; 
-        } else {
-            // Przesunięcie dla urządzeń desktopowych (powyżej 768px)
-            offsetPosition = targetElement.offsetTop - 130; 
-        }
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
-});
-
-//Mobilne menu
-
-// Dodaj poniższy kod do pliku scripts.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMenu = document.getElementById('close-menu');
 
+    // Funkcja do ukrywania menu mobilnego
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('show');
+    }
+
     hamburgerIcon.addEventListener('click', function() {
-        mobileMenu.style.display = 'block';
+        mobileMenu.classList.add('show');
     });
 
     closeMenu.addEventListener('click', function() {
-        mobileMenu.style.display = 'none';
+        closeMobileMenu();
     });
 
-    // Zmiana logo na przewiniętym top-menu
+    // Dodaj nasłuchiwacze kliknięć do linków w menu mobilnym
+    const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+
+    // Przewijanie top menu
     const topMenu = document.getElementById('top-menu');
     const logoImg = document.getElementById('logo-img');
     const originalLogoSrc = 'images/logo.png';
@@ -214,17 +155,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Przesunięcie kalkulatora przy scrollu
     document.getElementById('scroll-to-calculator').addEventListener('click', function(e) {
         e.preventDefault();
-
         const targetElement = document.getElementById('subscription-calculator');
-
         if (targetElement) {
-            let offsetPosition;
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                offsetPosition = targetElement.offsetTop - 80;
-            } else {
-                offsetPosition = targetElement.offsetTop - 130;
-            }
-
+            let offsetPosition = window.matchMedia("(max-width: 768px)").matches ?
+                targetElement.offsetTop - 80 : targetElement.offsetTop - 130;
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
@@ -235,17 +169,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Przesunięcie Portfolio przy scrollu
     document.getElementById('scroll-to-portfolio').addEventListener('click', function(e) {
         e.preventDefault();
-
         const targetElement = document.getElementById('portfolio');
-
         if (targetElement) {
-            let offsetPosition;
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                offsetPosition = targetElement.offsetTop - 80;
-            } else {
-                offsetPosition = targetElement.offsetTop - 130;
-            }
-
+            let offsetPosition = window.matchMedia("(max-width: 768px)").matches ?
+                targetElement.offsetTop - 80 : targetElement.offsetTop - 130;
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
@@ -253,6 +180,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
 
 
 

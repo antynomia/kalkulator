@@ -55,6 +55,8 @@ header {
     flex: 1;
 }
 
+
+
 .menu-links {
     flex: 1;
     margin-right: 20px;
@@ -86,7 +88,8 @@ header {
 
 /* Styl dla ikony hamburgera */
 .hamburger-menu {
-    display: none; /* Ukryj ikonę hamburgera na większych ekranach */
+    margin-right: 20px;
+    display: none; /* Pokazuje ikonę hamburgera na mniejszych ekranach */
 }
 
 #hamburger-icon {
@@ -95,6 +98,7 @@ header {
     cursor: pointer;
 }
 
+/* Styl menu mobilnego */
 .mobile-menu {
     display: none; /* Ukryj menu mobilne domyślnie */
     position: fixed;
@@ -104,16 +108,28 @@ header {
     height: 100%;
     background-color: #fff; /* Tło menu mobilnego */
     z-index: 1000;
-    padding: 20px;
+    padding: 0px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu.show {
+    display: block; /* Pokazuje menu mobilne, gdy jest aktywne */
+    opacity: 1;
+    visibility: visible;
 }
 
 .mobile-menu a {
     display: block;
-    color: #4CAF50; /* Zielony kolor linków w menu mobilnym */
+    color: #0EB688; /* Zielony kolor linków w menu mobilnym */
     padding: 10px;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 30px;
 }
 
 .mobile-menu a:hover {
@@ -122,7 +138,8 @@ header {
 
 #close-menu {
     text-align: right;
-    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-top: 15px;
 }
 
 #close-menu img {
@@ -672,11 +689,24 @@ footer {
         margin-left: 20px;
     }
 
+    .hamburger-menu {
+        display: block; /* Pokazuje ikonę hamburgera na mniejszych ekranach */
+    }
+    
+    /* Styl menu  */
+    .mobile-menu {
+        display: block; /* Ukryj menu mobilne domyślnie */
+        
+    }
+
+    .menu-links {
+        display: none;
+    }
+
     #hero {
         height: 400px;
         background-position: left -1250px top -250px;
     }
-
 
     .hero-content h1 {
         font-size: 48pt; /* Dostosowanie rozmiaru fontu */
@@ -696,7 +726,6 @@ footer {
 
     .hello p {
         font-size: 16px;
-  
     }
 
     .info-items {
