@@ -1,8 +1,8 @@
 // Punkt referencyjny: liczba godzin -> stawka za godzinę dla różnych okresów
 const referencePoints = {
-    1: { 1: 150, 20: 110, 40: 90 }, // 1 miesiąc
-    2: { 1: 225, 20: 165, 40: 135 }, // 2 miesiące
-    3: { 1: 300, 20: 220, 40: 180 }  // 3 miesiące
+    1: { 1: 180, 20: 105, 40: 80 }, // 1 miesiąc
+    2: { 1: 270, 20: 165, 40: 120 }, // 2 miesiące
+    3: { 1: 360, 20: 225, 40: 160 }  // 3 miesiące
 };
 
 // Funkcja interpolacji liniowej
@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'zakres_web', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-web.json' },
         { id: 'zakres_mobile', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-mobile.json' },
         { id: 'zakres_print', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-print.json' },
-        { id: 'zakres_pixel', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/' },
-        { id: 'zakres_fotomontaz', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/' },
+        { id: 'zakres_pixel', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-pixelart.json' },
+        { id: 'zakres_fotomontaz', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-uslugi-fotomontaze.json' },
         { id: 'info_rozliczenie', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-rozliczenie.json' },
         { id: 'info_godziny', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-godziny.json' },
         { id: 'info_elastycznosc', path: 'https://antynomia.github.io/kalkulator/images/ico-anim/ic-info-elastycznosc.json' },
