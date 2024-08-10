@@ -66,16 +66,20 @@ header {
 .menu-links a {
     margin-right: 20px;
     font-weight: bold;
-    color: #0eb688;
+    color: #fff;
     text-decoration: none;
 }
 
 .menu-links a:hover {
-    color: #fff;
+    color: #0eb688;
+}
+
+#top-menu.scrolled a {
+    color: #000;
 }
 
 #top-menu.scrolled a:hover {
-    color: #000;
+    color: #0eb688;
 }
 
 .top-menu .logo img {
@@ -138,8 +142,7 @@ header {
 
 #close-menu {
     text-align: right;
-    margin-right: 40px;
-    margin-top: 15px;
+    margin-right: 20px;
 }
 
 #close-menu img {
