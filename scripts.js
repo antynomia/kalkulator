@@ -110,6 +110,8 @@ animations.forEach(animation => {
 });
 
 
+// Menu i scroll
+
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const mobileMenu = document.getElementById('mobile-menu');

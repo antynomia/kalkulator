@@ -176,7 +176,7 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 72pt;
+    font-size: 88pt;
     margin: 0;
     margin-left: 20px;
 }
@@ -693,6 +693,21 @@ footer {
 /* Responsywność */
 
 @media (max-width: 1024px) {
+        .hero-content h1 {
+            font-size: 72pt; /* Dostosowanie rozmiaru fontu */
+            margin-left: 20px;
+        }
+        
+        .hero-content h2 {
+            font-size: 32pt; /* Dostosowanie rozmiaru fontu */
+            margin-left: 20px;
+        }
+
+        .hero-content-hello h2 {
+            margin: 40px;
+            margin-top: 0px;
+        }
+
         .info-items {
             display: grid;
         }
@@ -734,13 +749,12 @@ footer {
     }
 
     #hero {
-        height: 400px;
-        background-position: left -1250px top -250px;
+        height: 280px;
+        background-attachment: scroll;
     }
 
     .hero-content h1 {
-        font-size: 48pt; /* Dostosowanie rozmiaru fontu */
-        margin-left: 20px;
+        font-size: 40pt; /* Dostosowanie rozmiaru fontu */
     }
 
     .hero-content h2 {
@@ -751,7 +765,6 @@ footer {
     .hero-content-hello h2 {
         font-size: 24pt;
         margin: 20px;
-        margin-bottom: 40px;
     }
 
     .hello {
