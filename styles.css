@@ -706,7 +706,9 @@ footer {
     }
 
     .left-column, .right-column {
-        padding-right: 0;
+        padding-right: 0px;
+        padding-left: 0px;
+        gap: 20px;
     }
     #top-menu {
         height: 60px;
@@ -723,12 +725,12 @@ footer {
     
     /* Styl menu  */
     .mobile-menu {
-        display: block; /* Ukryj menu mobilne domyślnie */
+        display: block; /* Pokaz menu mobilne */
         
     }
 
     .menu-links {
-        display: none;
+        display: none; /* Ukryj menu domyślne */
     }
 
     #hero {
@@ -761,12 +763,17 @@ footer {
     }
 
     .info-section p {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
     
     .info-item {
         flex: 1 1 100%; /* Dostosowanie do szerokości ekranu */
     }
+
+    .info-item p {
+        margin-bottom: 0px;
+    }
+
 
     .footer-container {
         text-align: center;
