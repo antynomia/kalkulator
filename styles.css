@@ -691,6 +691,15 @@ footer {
 }
 
 /* Responsywność */
+
+@media (max-width: 1024px) {
+        .info-items {
+            display: grid;
+        }
+    
+    }
+
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -751,8 +760,8 @@ footer {
         font-size: 16px;
     }
 
-    .info-items {
-        display: grid;
+    .info-section p {
+        margin-bottom: 50px;
     }
     
     .info-item {
