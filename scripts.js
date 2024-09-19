@@ -51,7 +51,24 @@ function updateCalculator() {
 
     // Aktualizowanie tekstu ceny
     priceText.innerHTML = `Cykliczna opłata za abonament wynosi ${price.toFixed(2).replace('.', ',')} PLN co ${period === 1 ? '1 miesiąc' : period + ' miesiące'}.`;
+
+    // Zaktualizuj link e-maila
+    updateEmailLink(hours, period);
 }
+
+// Funkcja do aktualizacji linku e-mailowego
+function updateEmailLink(hours, period) {
+    const emailLink = document.getElementById('email-link');
+    const subject = "Wycena abonamentu";
+
+    // Warunek na liczbę pojedynczą dla 1 miesiąca
+    const periodText = period === 1 ? '1 miesiąc' : `${period} miesiące`;
+
+    const body = `Dzień dobry, Poproszę o wycenę abonamentu na ${hours} godzin na ${periodText}.`;
+
+    emailLink.href = `mailto:lidia.m.radziszewska@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 
 // Inicjalizacja elementów formularza
 const hoursInput = document.getElementById('hours');
@@ -81,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.segmented-control .segment').classList.add('active');
     updateCalculator(); // Wywołaj funkcję na starcie, aby ustawić domyślną wartość
 });
+
 
 // Initialize animations
 const animations = [

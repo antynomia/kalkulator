@@ -662,6 +662,22 @@ input[type="range"]::-ms-track {
 }
 
 
+.kalkulator-kontakt {
+    text-align: center;
+    color: #fff;
+}
+
+.kalkulator-kontakt p {
+    font-size: 9pt;
+    margin-top: 0px;
+}
+
+ .kalkulator-kontakt a {
+    font-size: 11pt;
+    color: #fff;
+    text-decoration: none;
+ }
+
 .divider {
     width: 100%;
     height: 1px;
