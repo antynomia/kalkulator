@@ -1,8 +1,8 @@
 // Punkt referencyjny: liczba godzin -> stawka za godzinę dla różnych okresów
 const referencePoints = {
-    1: { 1: 200, 20: 120, 40: 90 }, // 1 miesiąc
-    2: { 1: 300, 20: 188, 40: 135 }, // 2 miesiące
-    3: { 1: 400, 20: 225, 40: 180 }  // 3 miesiące
+    1: { 1: 250, 20: 150, 40: 100 }, // 1 miesiąc
+    2: { 1: 375, 20: 245, 40: 175 }, // 2 miesiące
+    3: { 1: 500, 20: 340, 40: 250 }  // 3 miesiące
 };
 
 // Funkcja interpolacji liniowej
