@@ -432,13 +432,19 @@ main {
     background: #FFFFFF;
     box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.07), 0px 10px 10px rgba(0, 0, 0, 0.08), 0px 2px 3px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    padding: 0px;
-    flex: 1 1 calc(50% - 20px);
+    padding: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: left;
+    flex: 1 1 calc(50% - 20px); /* Domyślnie 50% szerokości minus odstęp */
+}
+
+/* Pierwszy i ostatni element - pełna szerokość (dwie kolumny) */
+.info-items .behance-item:first-child,
+.info-items .behance-item:last-child {
+    flex: 1 1 100%;
 }
 
 .behance-item iframe {
